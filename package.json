@@ -1,0 +1,26 @@
+{
+  "name": "poe-events",
+  "version": "0.1.0",
+  "description": "event processor",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/poegroup/poe-events.git"
+  },
+  "author": "Cameron Bytheway <bytheway.cameron@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poegroup/poe-events/issues"
+  },
+  "homepage": "https://github.com/poegroup/poe-events",
+  "dependencies": {
+    "batch": "^0.5.1",
+    "envs": "^0.1.6",
+    "iron_mq": "^0.2.3",
+    "ngrok": "^0.1.98",
+    "simple-stack-common": "^0.2.3"
+  }
+}
