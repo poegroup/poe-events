@@ -74,6 +74,8 @@ exports = module.exports = function(handle, opts) {
     });
   });
 
+  app.queue = ironmq;
+
   return app;
 };
 
@@ -104,7 +106,7 @@ exports.ngrok = function(cb) {
   var args = argv.slice(3);
 
   ngrok.connect(PORT, function(err, url) {
-    process.env.IRONMQ_SUFFIX = '_dev_' + os.hostname();
+    process.env.IRONMQ_SUFFIX = process.env.IROMMQ_SUFFIX || '_dev_' + os.hostname();
     process.env.SUBSCRIPTION_URL = url;
     process.env.TMP_QUEUES = '1';
 
